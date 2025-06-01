@@ -1,0 +1,125 @@
+body {
+  background-color: rgb(236, 202, 233);
+  font-family: "WDXL Lubrifont TC", sans-serif;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.window {
+  border: 3px solid rgb(220, 125, 218);
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.window__image {
+  width: 400px;
+}
+.window__text {
+  color: white;
+  font-weight: 900;
+  font-size: 64px;
+}
+.window__btn {
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  gap: 60px;
+}
+.window__btn-single {
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  cursor: pointer;
+  border: none;
+  /* border: 2px solid rgb(236, 49, 233);
+  background-color: rgb(236, 202, 233);
+  color: white; */
+  font-size: 44px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-weight: lighter;
+}
+#yes:hover {
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+  font-size: 54px;
+}
+#no:hover {
+  box-shadow: 0 0 15px rgba(18, 15, 16, 0.5);
+  font-size: 54px;
+}
+.accept {
+  background-color: #ff69b4;
+  animation: pulse 0.5s ease infinite;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+}
+.decline {
+  background-color: black;
+  color: white;
+}
+.hide {
+  display: none;
+}
+
+.heart {
+  position: absolute;
+  font-size: 40px;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+  opacity: 0;
+}
+
+.jump {
+  animation: jump 0.5s ease infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .window__image {
+    width: 200px;
+  }
+  .window {
+    border: 3px solid rgb(220, 125, 218);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
